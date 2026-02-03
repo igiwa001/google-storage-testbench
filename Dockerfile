@@ -1,6 +1,7 @@
 FROM python:3.13-slim
+WORKDIR /opt/storage-testbench
 
-ADD https://github.com/googleapis/storage-testbench.git#v0.60.0 .
+ADD https://github.com/googleapis/storage-testbench.git#v0.60.0 /opt/storage-testbench
 RUN pip install . --no-cache-dir
 
 EXPOSE 9000
